@@ -1,3 +1,3 @@
 # cherise-CTD-Intro
 portfolio project for Intro to Programming course with Code the Dream
-Cherise testing test
+Cherise's git portfolio
