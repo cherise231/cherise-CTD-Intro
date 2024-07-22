@@ -9,3 +9,9 @@ Cherise's git portfolio
 
 "You don't have to be great to start, but you have to start to be great." - Zig Ziglar
 
+shortcuts
+
+type p then tab to add p tags
+! tab adds the html template
+lorem20 adds the number of words ex lorem20
+rm <name of file>
