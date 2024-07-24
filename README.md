@@ -16,3 +16,5 @@ type p then tab to add p tags
 lorem20 adds the number of words ex lorem20
 rm <name of file>
  <!-- Setting the viewport to make your website look good on all devices: -->
+ shift alt down arrow copies the line
+ control + f finds text
