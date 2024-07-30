@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  /*background-color: #040a12; #d0f6ff;  rgb(208, 246, 255) */
+  /* background-color: red; */
+  background-image: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #0d213b 70%,
+    #ffffff 50%,
+    #0d213b 70%,
+    #040a12 100%
+  );
+  /* background-color: #040a12; */
+  /* background-image: linear-gradient(to bottom, #2f4f7f 0%, #040a12 50%, #d1b8b8 100%); */
+  color: #ffffff;
+  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  font-size: 1.1em;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff;
+  padding: 15px 0;
+  z-index: 1000; /* Make sure it appears above the video */
+}
+
+/* Navbar Container */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.8em;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #77fff7; /* Change color on hover */
+  text-decoration: underline;
+}
+
+/* Style for the video element */
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw; /* full viewport width */
+  /* height: 100%; */
+  object-fit: cover; /* scale the video to cover the entire area */
+  z-index: -1; /* Send the video behind the content */
+  transform: translate(-50%, -50%);
+}
+
+/* Overlay content on top of the video */
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  width: 60%; /* Make it wider */
+  /*height: 40%;  Make it shorter */
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 30px;
+  font-size: 18px;
+  /* background-color: red; */
+}
+
+/* Heading style */
+.content-overlay h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraph style */
+.content-overlay p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+/* Header Styles */
+
+/* h1 {
+  color: #2f0535;
+} */
+
+#marquee {
+  position: relative;
+  left: 100%;
+  animation: slideIn 3s forwards;
+  /* animation-delay: 1s; */
+}
+
+@keyframes slideIn {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+main {
+  margin-top: 830px;
+}
+
+#home {
+  /*background-color: #8080f8;  rgb(128, 128, 248) */
+  color: #000000;
+  /* padding: 50px; top and bottom */
+  padding-top: 70px;
+  margin: 0; /*reset margin */
+  /*scroll-margin-top: 1600px;  Adjust this value based on your fixed header height */
+}
+
+#about {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 40px 200px 40px 200px;
+}
+
+#experience {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 20px 200px 40px 200px;
+  
+  position: relative;
+}
+
+.line {
+  width: 5in; /* or 5in */
+  border-top: 1px solid #ccc;
+  /*margin: 0 auto;  centers the line within the container */
+  height: 0; /* Ensures the element does not affect vertical layout */
+  display: block; /* Ensures the element respects the width */
+}
+
+/* #experience::before {
+  content: "";
+  display: block;
+  position: absolute; */
+  /*top: 20px; match the top padding */
+  /*left: 200px;  match the left padding */
+  /*width: calc(100% - 400px);  subtract the left and right padding */
+  /* border-top: 1px solid #ccc;
+} */
+
+#skills {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 20px 200px 40px 200px;
+}
+
+#connect {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 20px 200px 40px 200px;
+}
+
+#connect ul i {
+  color: #77fff7; /* change this to the desired color */
+  font-size: 150%;
+}
+
+#connect ul a:hover i {
+  color: #ffffff; /* change this to the desired color */
+}
+
+#connect li a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+#connect li a span {
+  color: #ffffff;
+}
+
+#connect li a i {
+  margin-left: 20px;
+  
+}
+
+/* Philosophy Section Styles */
+#philosophy {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 20px 200px 200px 200px;
+}
+
+blockquote {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  padding: 20px 200px 0 200px;
+  margin: 0 20px 15px 20px; /* top, right, bottom, left */
+  padding: 0 15px;
+}
+
+/* #philosophy i {
+  transform: translateX(10px);
+} */
