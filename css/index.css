@@ -13,7 +13,7 @@ body {
     #0d213b 70%,
     #040a12 100%
   );
-  /* background-color: #040a12; */
+  background-color: #040a12;
   /* background-image: linear-gradient(to bottom, #2f4f7f 0%, #040a12 50%, #d1b8b8 100%); */
   color: #ffffff;
   /* height: 100%; */
@@ -121,9 +121,9 @@ body {
 
 /* Header Styles */
 
-/* h1 {
-  color: #2f0535;
-} */
+h1 {
+  color: #ffffff;
+}
 
 #marquee {
   position: relative;
@@ -156,8 +156,15 @@ main {
 
 #about {
   /*background-color: #040a12; rgb(77, 77, 148) */
+  
   color: #ffffff;
   padding: 40px 200px 40px 200px;
+}
+
+#about h2, #experience h2, #skills h2, #connect h2, #philosophy h2    {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 #experience {
