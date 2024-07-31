@@ -218,10 +218,12 @@ main {
   display: flex;
   align-items: center;
   color: #ffffff;
+  text-decoration: none;
 }
 
-#connect li a span {
+#connect li a {
   color: #ffffff;
+  padding: .2em;
 }
 
 #connect li a i {
