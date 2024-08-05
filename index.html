@@ -5,62 +5,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   <title>Web Page1</title>
   <meta name="description"
     content="Software engineering student passionate about building innovative products that make a difference. Explore my projects, skills, and experience in JavaScript, HTML, CSS, and more, as I strive to use technology to improve lives." />
- 
- 
+
+
 </head>
 
 <body>
   <header>
-    <br />
-    <br />
+    <!-- <section id="about"> -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="navbar-brand"><i class="fa-solid fa-less-than"></i>CS<i
+            class="fa-solid fa-greater-than"></i></a>
+        <ul class="navbar-menu">
+          <!-- <li><a href="#home">Home</a></li> -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <!-- <li><a href="#philosophy">Philosophy</a></li> -->
+        </ul>
 
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#connect">Connect</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-      </ul>
+      </div>
+
     </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <br />
-      <h1>Cherise S.</h1>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+  <!-- <section id="about"> -->
+  <!-- Video Background Container -->
+  <section id="home" class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      <source src="your-video-file.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="content-overlay">
+      <h1>Cherise</h1>
       <h2>
-        <i id="marquee" style="
-              position: relative;
-              left: 100%;
-              animation: slideIn 2s forwards;
-            ">I build things for the web.</i>
+        <i id="marquee">I build things for the web.</i>
       </h2>
-      <style>
-        @keyframes slideIn {
-          0% {
-            left: 100%;
-          }
+      <p>
+        <!-- Software Engineering Student & Innovative Problem-Solver -->
 
-          100% {
-            left: 0;
-          }
-        }
-      </style>
-    </section>
+        I hammer out code, craft user experiences, and bring digital ideas to life. With a passion for building stuff
+        that works, I'm always tinkering with new tech, experimenting with fresh approaches, and pushing the boundaries
+        of what's possible on the web. If you need someone who can turn your vision into a reality, let's build
+        something amazing together!
+      </p>
+      <!-- <a href="#more" class="cta-button">Learn More</a> -->
+    </div>
+  </section>
+  <!-- </section> -->
 
-    <br />
+  <main>
+
+    <div class="background-shapes">
+      <div class="diamond">
+        <div class="inner-diamond"></div>
+      </div>
+      <div class="shape">
+        
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <div class="shape-3"></div>
+        <!-- Add more shapes -->
+      
 
     <section id="about">
       <h2>ABOUT</h2>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
+
+
+
       <p>
-        Hi, I'm Cherise, a software engineering student with a passion for
+        I'm a software engineering student with a passion for
         building innovative products that make a difference. With a wild and
         vivid imagination, I'm always bursting with new ideas and
         possibilities. It's this creative energy that drew me to software
@@ -78,11 +104,16 @@
         balance that comes from spending time in nature and giving back to my
         community.
       </p>
+      </div>
+      </div>
     </section>
 
     <section id="experience">
+      <div class="line"></div>
       <h2>EXPERIENCE</h2>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
       <p>2024 - PRESENT</p>
 
       <h3>
@@ -113,10 +144,14 @@
       </ul>
     </section>
 
-    <br />
+
     <section id="skills">
+      <div class="line"></div>
       <h2>SKILLS</h2>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
+
       <h3>Programming Languages:</h3>
 
       <ul>
@@ -129,7 +164,7 @@
       <h3>Web Development:</h3>
 
       <ul>
-        <li>DOM (Document Object Model)</li>
+        <li>DOM (Document Object Model) <i class="fas fa-desktop"></i></li>
         <li>Responsive design</li>
         <li>Accessibility considerations</li>
         <li>Forms and form handling</li>
@@ -171,35 +206,64 @@
                 Git <i class="fa fa-horizontal-rule"></i> →
                 Python <i class="fa fa-horizontal-rule"></i> →
                 Data Analytics -->
+
+    </section>
+    <section id="projects">
+      <div class="line"></div>
+      <h2>PROJECTS</h2>
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
+
+      <div class="project-containter">
+        <h3>Project 1 Title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ipsam repellat dolores optio ipsa cumque soluta
+          vitae officiis tempore maxime?</p>
+        <a href="https://www.myproject.com" target="_blank">Project1</a>
+
+      </div>
+
+      <!-- JavaScript <i class="fa fa-horizontal-rule"></i> →
+                HTML <i class="fa fa-horizontal-rule"></i> →
+                CSS <i class="fa fa-horizontal-rule"></i> →
+                Git <i class="fa fa-horizontal-rule"></i> →
+                Python <i class="fa fa-horizontal-rule"></i> →
+                Data Analytics -->
+
     </section>
 
-    <br />
     <section id="connect">
+      <div class="line"></div>
       <h2>CONNECT</h2>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
 
       <ul>
         <li>
-          <a href="https://github.com/cherise231">My GitHub</a> →
-          <i class="fab fa-github"></i>
+          <a href="https://github.com">My GitHub →
+            <i class="fab fa-github"></i></a>
         </li>
         <li>
-          <a href=" cherises711@gmail.com">My Email</a> →
-          <i class="fas fa-envelope"></i>
+          <a href=" cherises711@gmail.com">My Email →
+            <i class="fas fa-envelope"></i></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/cherise-s-6185a029a/Linkedin">My Linkedin</a>
-          → <i class="fab fa-linkedin"></i><i class="fa fa-horizontal-rule"></i>
+          <a href="https://www.linkedin.com/">My Linkedin
+            → <i class="fab fa-linkedin"></i><i class="fa fa-horizontal-rule"></i></a>
         </li>
       </ul>
     </section>
 
-    <br />
+
 
     <section id="philosophy">
+      <div class="line"></div>
       <h2>PHILOSOPHY</h2>
-      <span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
-      <blockquote style="margin: 0 0 1.5em; padding: 0 1.5em">
+      <i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i class="fa-solid fa-less-than"></i><i
+        class="fa-solid fa-less-than"></i>
+      <blockquote>
         <p>
           “This was one of the best parts of being a coder, and an artist: the
           thrill of being in the middle of creating something delightful. It's
@@ -208,7 +272,7 @@
         </p>
         <cite>- Dr. Joy Buolamwini, Unmasking AI</cite>
       </blockquote>
-      <blockquote style="margin: 0 0 1.5em; padding: 0 1.5em">
+      <blockquote>
         <p>
           “Programming isn't about what you know; it's about what you can
           figure out.”
@@ -221,9 +285,11 @@
         way.
       </p>
     </section>
+  </div>
+</div>
+
   </main>
-  <br />
-  <br />
+
 </body>
 
 </html>
