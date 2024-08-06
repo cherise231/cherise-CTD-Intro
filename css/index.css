@@ -381,6 +381,7 @@ li i {
   width: 300px;
   height: 300px;
   opacity: 0.2;
+  z-index: -1;
 }
 
 .shape-2 {
