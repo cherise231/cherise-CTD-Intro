@@ -25,7 +25,6 @@ body {
   height: 100vh; /* Add this to create a scrolling container */
   overflow-y: auto; /* create a scrolling container */
   position: relative;
-  
 }
 
 /* Navbar styles */
@@ -41,12 +40,10 @@ body {
   overflow: hidden;
 }
 
-
-
 .parent-nav-container {
   overflow-y: auto;
   /* height: 100px; */
-  height: 100vh; 
+  height: 100vh;
   /* /*position: sticky; */
 }
 
@@ -208,7 +205,6 @@ main {
 
   color: #ffffff;
   padding: 0px 200px 40px 200px;
-  
 }
 
 #about h2,
