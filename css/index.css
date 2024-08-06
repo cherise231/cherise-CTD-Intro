@@ -8,11 +8,11 @@ body {
   background-image: linear-gradient(
     to bottom,
     #000000 0%,
-    #0d213b 70%,
-    #ffffff 50%,
-    #0d213b 70%,
-    #040a12 100%
+    #091627 50%,
+    #060f1b 80%,
+    #000000 100%
   );
+
   background-color: #040a12;
   /* background-image: linear-gradient(to bottom, #2f4f7f 0%, #040a12 50%, #d1b8b8 100%); */
   color: #ffffff;
@@ -22,19 +22,32 @@ body {
   word-wrap: break-word;
   overflow-x: hidden;
   font-size: 1.1em;
-  /* position: relative; */
+  height: 100vh; /* Add this to create a scrolling container */
+  overflow-y: auto; /* create a scrolling container */
+  position: relative;
+  
 }
 
 /* Navbar styles */
 .navbar {
-  position: fixed; /*sticky*/
-  /* position: sticky; */
+  /*position: fixed; sticky*/
+  position: sticky;
   top: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: #fff;
   padding: 15px 0;
   z-index: 1000; /* Make sure it appears above the video */
+  overflow: hidden;
+}
+
+
+
+.parent-nav-container {
+  overflow-y: auto;
+  /* height: 100px; */
+  height: 100vh; 
+  /* /*position: sticky; */
 }
 
 /* Navbar Container */
@@ -54,7 +67,11 @@ body {
   /* color: #ffffff; */
   text-decoration: none;
   font-weight: bold;
-  background: linear-gradient(to right, #ffffff, #00ffee); /* Add a gradient background */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #00ffee
+  ); /* Add a gradient background */
   -webkit-background-clip: text; /* WebKit (Chrome, Safari) */
   -moz-background-clip: text; /* Mozilla (Firefox) */
   background-clip: text; /* Standard property */
@@ -73,7 +90,6 @@ body {
   font-size: 10.3em; /* Reduce the font size of the icons to make them smaller */
   font-weight: 100; /* Make the icon thinner */
   line-height: 1; /* Adjust the line height to ensure proper vertical alignment */
-
 }
 
 .navbar-brand .fa-less-than {
@@ -175,7 +191,7 @@ h1 {
 }
 
 main {
-  margin-top: 830px;
+  margin-top: 40px;
 }
 
 #home {
@@ -189,14 +205,17 @@ main {
 
 #about {
   /*background-color: #040a12; rgb(77, 77, 148) */
-  
+
   color: #ffffff;
+  padding: 0px 200px 40px 200px;
   
-  padding: 140px 200px 40px 200px;
-  position: relative; /* Add relative positioning to the about section */
 }
 
-#about h2, #experience h2, #skills h2, #connect h2, #philosophy h2    {
+#about h2,
+#experience h2,
+#skills h2,
+#connect h2,
+#philosophy h2 {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 700;
@@ -206,7 +225,7 @@ main {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
   padding: 20px 200px 40px 200px;
-  
+
   position: relative;
 }
 
@@ -222,10 +241,10 @@ main {
   content: "";
   display: block;
   position: absolute; */
-  /*top: 20px; match the top padding */
-  /*left: 200px;  match the left padding */
-  /*width: calc(100% - 400px);  subtract the left and right padding */
-  /* border-top: 1px solid #ccc;
+/*top: 20px; match the top padding */
+/*left: 200px;  match the left padding */
+/*width: calc(100% - 400px);  subtract the left and right padding */
+/* border-top: 1px solid #ccc;
 } */
 
 #skills {
@@ -240,12 +259,10 @@ main {
   padding: 20px 200px 40px 200px;
 }
 
-
 #connect {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
   padding: 20px 200px 40px 200px;
-  
 }
 
 #connect ul {
@@ -263,31 +280,22 @@ main {
 #connect ul i {
   color: #77fff7; /* change this to the desired color */
   font-size: 150%;
-  
-  
 }
 
 #connect ul a:hover i {
   color: #ffffff; /* change this to the desired color */
-  
 }
-
-
 
 #connect li a {
   display: flex;
   align-items: center;
   color: #ffffff;
   text-decoration: none;
-  padding: .2em;
-  
+  padding: 0.2em;
 }
-
-
 
 #connect li a i {
   margin-left: 20px;
-  
 }
 
 /* Philosophy Section Styles */
@@ -309,13 +317,42 @@ blockquote {
   transform: translateX(10px);
 } */
 
+/* experience columns */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* grid-auto-flow: dense; */
+  align-items: baseline;
+}
 
+.grid-item {
+  padding: 20px;
+}
+
+.grid-item:first-child {
+  padding-right: 40px;
+}
+
+.grid-item:last-child {
+  padding-left: 40px;
+}
+
+ul {
+  /* list-style: none; */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li i {
+  margin-left: 10px;
+}
 
 /* ///////////background shapes/////////////// */
-
-
-
-
 
 .background-shapes {
   position: relative; /* Make the background circle absolute */
@@ -325,7 +362,7 @@ blockquote {
   height: 100%; /* Make it full-width and full-height */
   z-index: -1; /* Send it behind the content */
   border-radius: 50%;
-  
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add some depth */
   /*opacity: 0.2;  Add 50% transparency */
 }
@@ -347,19 +384,18 @@ blockquote {
   /* height: 12em; Make.shape-1 larger using em units */
   width: 300px;
   height: 300px;
-  opacity: 0.2; 
+  opacity: 0.2;
 }
-
 
 .shape-2 {
   background: linear-gradient(135deg, #000000, #51f9ff);
   top: 240%;
   left: 1%;
   transform: translate(0, 0);
-  
+
   width: 100px;
   height: 100px;
-  opacity: 0.7; 
+  opacity: 0.7;
 }
 
 .shape-3 {
@@ -369,7 +405,7 @@ blockquote {
   transform: translate(0, 0);
   width: 12em; /* Make.shape-1 larger using em units */
   height: 12em; /* Make.shape-1 larger using em units */
-  opacity: 0.2; 
+  opacity: 0.2;
 }
 
 .diamond {
@@ -380,14 +416,18 @@ blockquote {
   height: 200px;
   transform: rotate(45deg);
   border: 0.5px solid #4d4d4d;
- /* background-color: #ff0000;  Add a red background color */
+  /* background-color: #ff0000;  Add a red background color */
   border-radius: 0; /* Add this to override the inherited border-radius value */
 }
 
 .inner-diamond {
   position: absolute;
-  top: calc(50% - 75px); /* Calculate top position: 50% of parent height - half of inner diamond height */
-  left: calc(50% - 75px); /* Calculate left position: 50% of parent width - half of inner diamond width */
+  top: calc(
+    50% - 75px
+  ); /* Calculate top position: 50% of parent height - half of inner diamond height */
+  left: calc(
+    50% - 75px
+  ); /* Calculate left position: 50% of parent width - half of inner diamond width */
   width: 150px;
   height: 150px;
   transform: rotate(90deg);
