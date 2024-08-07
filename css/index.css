@@ -22,29 +22,38 @@ body {
   word-wrap: break-word;
   overflow-x: hidden;
   font-size: 1.1em;
-  height: 100vh; /* Add this to create a scrolling container */
-  overflow-y: auto; /* create a scrolling container */
-  position: relative;
+  /*height: 100vh;  to create a scrolling container */
+  overflow-y: auto; /*create a scrolling container */
+  /* position: relative; */
 }
 
 /* Navbar styles */
 .navbar {
-  /*position: fixed; sticky*/
-  position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   color: #fff;
   padding: 15px 0;
   z-index: 1000; /* Make sure it appears above the video */
-  overflow: hidden;
+  overflow: auto;
+  /*position: sticky; */
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  overflow-y: auto;
+  /* height: 100vh; */
 }
 
 .parent-nav-container {
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /* height: 100px; */
-  height: 100vh;
-  /* /*position: sticky; */
+  /* height: 100vh; */
+
+  z-index: 1000;
 }
 
 /* Navbar Container */
@@ -129,7 +138,7 @@ body {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: 100vw; /* full viewport width */
+  /*width: 100vw;  full viewport width */
   /* height: 100%; */
   object-fit: cover; /* scale the video to cover the entire area */
   z-index: -1; /* Send the video behind the content */
@@ -150,6 +159,7 @@ body {
   background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
   border-radius: 30px;
   font-size: 18px;
+
   /* background-color: red; */
 }
 
@@ -188,21 +198,22 @@ h1 {
 }
 
 main {
-  margin-top: 40px;
+  margin-top: 65em;
+  scroll-margin-top: 0px;
 }
 
 #home {
-  /*background-color: #8080f8;  rgb(128, 128, 248) */
+  /* background-color: #8080f8;  rgb(128, 128, 248) */
   color: #000000;
   /* padding: 50px; top and bottom */
   padding-top: 70px;
-  margin: 0; /*reset margin */
-  /*scroll-margin-top: 1600px;  Adjust this value based on your fixed header height */
+  /*margin: 0; reset margin */
+  /*scroll-margin-top: 1600px; Adjust this value based on your fixed header height */
 }
 
 #about {
   /*background-color: #040a12; rgb(77, 77, 148) */
-
+  scroll-margin-top: 7em;
   color: #ffffff;
   padding: 0px 200px 40px 200px;
 }
@@ -215,13 +226,14 @@ main {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 700;
+  scroll-margin-top: 7em;
 }
 
 #experience {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
   padding: 20px 200px 40px 200px;
-
+  scroll-margin-top: 7em;
   position: relative;
 }
 
@@ -246,18 +258,21 @@ main {
 #skills {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
+  scroll-margin-top: 7em;
   padding: 20px 200px 40px 200px;
 }
 
 #projects {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
+  scroll-margin-top: 7em;
   padding: 20px 200px 40px 200px;
 }
 
 #connect {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
+  scroll-margin-top: 7em;
   padding: 20px 200px 40px 200px;
 }
 
@@ -265,6 +280,7 @@ main {
   list-style: none;
   padding: 1em 0 0 0;
   margin: 0;
+  scroll-margin-top: 7em;
   display: flex; /* Make the ul a flex container */
   flex-wrap: wrap; /* Allow the items to wrap to the next line if necessary */
 }
@@ -313,8 +329,16 @@ blockquote {
   transform: translateX(10px);
 } */
 
+.project-container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  width: 40%;
+  /* grid-auto-flow: dense; */
+  align-items: baseline;
+}
+
 /* experience columns */
-.grid-container {
+.exp-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -322,15 +346,15 @@ blockquote {
   align-items: baseline;
 }
 
-.grid-item {
+.exp-item {
   padding: 20px;
 }
 
-.grid-item:first-child {
+.exp-item:first-child {
   padding-right: 40px;
 }
 
-.grid-item:last-child {
+.exp-item:last-child {
   padding-left: 40px;
 }
 
@@ -373,31 +397,31 @@ li i {
 
 .shape-1 {
   background: linear-gradient(45deg, #51f9ff, #000000);
-  top: 20%;
-  left: -1%;
+  top: 1%;
+  left: -10%;
   transform: translate(0, 0);
   /*width: 12em;  Make.shape-1 larger using em units */
   /* height: 12em; Make.shape-1 larger using em units */
-  width: 300px;
-  height: 300px;
+  width: 20em;
+  height: 20em;
   opacity: 0.2;
   z-index: -1;
 }
 
 .shape-2 {
-  background: linear-gradient(135deg, #000000, #51f9ff);
-  top: 240%;
+  background: linear-gradient(135deg, #51f9ff, #000000);
+  top: 55%;
   left: 1%;
   transform: translate(0, 0);
 
-  width: 100px;
-  height: 100px;
-  opacity: 0.7;
+  width: 10em;
+  height: 10em;
+  opacity: 0.3;
 }
 
 .shape-3 {
-  background: linear-gradient(225deg, #51f9ff, #000000);
-  top: 360%;
+  background: linear-gradient(225deg, #000000, #51f9ff);
+  top: 70%;
   left: 90%;
   transform: translate(0, 0);
   width: 12em; /* Make.shape-1 larger using em units */
@@ -407,7 +431,7 @@ li i {
 
 .diamond {
   position: absolute;
-  top: 150%; /* Adjust this value to position the diamond vertically */
+  top: 30%; /* Adjust this value to position the diamond vertically */
   left: 90%; /* Adjust this value to position the diamond horizontally */
   width: 200px;
   height: 200px;
