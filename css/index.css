@@ -36,6 +36,7 @@ body {
   padding: 15px 0;
   z-index: 1000; /* Make sure it appears above the video */
   overflow: auto;
+  backdrop-filter: blur(1px); /* blur effect behind the navbar */
   /*position: sticky; */
 }
 
@@ -199,8 +200,6 @@ header {
   width: 0; /* initial width is 0 */
 }
 
-
-
 @keyframes typing {
   0% {
     width: 0; /* start with no width */
@@ -213,8 +212,6 @@ header {
     border-right: none; /* remove the cursor at the end of the animation */
   }
 }
-
-
 
 /* Header Styles */
 
@@ -248,7 +245,7 @@ main {
 }
 
 #home {
-   /*background-color: #8080f8;  rgb(128, 128, 248) */
+  /*background-color: #8080f8;  rgb(128, 128, 248) */
   color: #000000;
   /* padding: 50px; top and bottom */
   /* padding-top: 20px; */
@@ -290,15 +287,6 @@ main {
   display: block; /* Ensures the element respects the width */
 }
 
-/* #experience::before {
-  content: "";
-  display: block;
-  position: absolute; */
-/*top: 20px; match the top padding */
-/*left: 200px;  match the left padding */
-/*width: calc(100% - 400px);  subtract the left and right padding */
-/* border-top: 1px solid #ccc;
-} */
 
 #skills {
   /*background-color: #040a12; rgb(77, 77, 148) */
@@ -502,30 +490,41 @@ li i {
   border-radius: 0; /* Add this to override the inherited border-radius value */
 }
 
-
-@media (540px <= width <= 719px) {
+/* tablet */
+@media (min-width: 600px) and (max-width: 899px) {
   body {
     color: rebeccapurple;
-    
   }
 
   .navbar {
-    background-color: rgb(1, 68, 80);
-    font-size: .8em;
+    background-color: rgb(1, 68, 80, .8); /**/
+    font-size: 0.9em;
+    /* background-color: transparent; */
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    backdrop-filter: blur(3px); /* blur effect behind the navbar */
+  }
 
+  .navbar-brand {
+    -webkit-text-fill-color: #77fff7; /* Add this rule to change the color on hover */
+    text-shadow: 0 0 5px #2a5c58, 0 0 10px #55b9b3, 0 0 10px #77fff7;
+    transform: rotate(360deg);
   }
 
   main {
-    margin-top: 50em; /* Adjust this value to your liking */
+    margin-top: 50em;
   }
 
   /* #background-video {
     
     height: 90vh;
   } */
+
   .content-overlay {
     background-color: rgba(37, 37, 37, 0.8);
-    
   }
 
   .content-overlay h1 {
@@ -534,9 +533,38 @@ li i {
   .content-overlay h2 {
     font-size: 1.2em;
   }
-  
+
   .content-overlay p {
     font-size: 1em;
   }
 
+  .content-overlay h1 > i.fa-hand {
+    
+    margin-right: 10px;
+    /* transform: rotate(-40deg) scaleX(-1);
+    font-size: 0.9em; */
+  }
+
+  #about {
+    /*background-color: #040a12; rgb(77, 77, 148) 
+    scroll-margin-top: 7em;*/
+    color: #ffffff;
+    padding: 0px 100px 40px 100px;
+  }
+  
+  #experience, #skills, #projects, #connect, #philosophy {
+    /*background-color: #040a12; rgb(77, 77, 148) 
+    scroll-margin-top: 7em;*/
+    color: #ffffff;
+    padding: 0px 100px 40px 100px;
+  }
+
+  #philosophy {
+    /*background-color: #040a12; rgb(77, 77, 148) 
+    scroll-margin-top: 7em;*/
+    color: #ffffff;
+    padding: 0px 100px 200px 100px;
+  }
+  
 }
+
