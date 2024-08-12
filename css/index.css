@@ -529,6 +529,7 @@ li i {
 
   .content-overlay h1 {
     font-size: 2em;
+    
   }
   .content-overlay h2 {
     font-size: 1.2em;
@@ -549,7 +550,11 @@ li i {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
-    padding: 0px 100px 40px 100px;
+    padding-top: 0px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    /* padding: 0px 100px 40px 100px; */
   }
   
   #experience, #skills, #projects, #connect, #philosophy {
