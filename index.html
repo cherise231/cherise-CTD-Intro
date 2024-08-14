@@ -19,8 +19,11 @@
     <div class="parent-nav-container">
       <nav class="navbar">
         <div class="nav-container">
-          <a href="#home" class="navbar-brand"><i class="fa-solid fa-less-than"></i>CS<i
-              class="fa-solid fa-greater-than"></i></a>
+          <a href="#home" class="navbar-brand">
+            <i class="fa-solid fa-less-than"></i>CS
+            <i class="fa-solid fa-greater-than"></i></a>
+
+          <i class="hamburger fa-solid fa-bars"></i>
           <ul class="navbar-menu">
             <!-- <li><a href="#home">Home</a></li> -->
             <li><a href="#about">About</a></li>
@@ -30,6 +33,7 @@
             <li><a href="#connect">Connect</a></li>
             <!-- <li><a href="#philosophy">Philosophy</a></li> -->
           </ul>
+
         </div>
       </nav>
 
@@ -49,7 +53,7 @@
 
       <h1 id="typing-effect"><i class="fa-regular fa-hand"></i>Hi! I'm Cherise</h1>
       <h1>
-        <i id="marquee">I build things for the web.</i>
+        <span id="marquee">I build things for the web.</span>
       </h1>
       <p>
         <!-- Software Engineering Student & Innovative Problem-Solver -->
@@ -191,7 +195,7 @@
 
         <ul>
           <li>
-            Version control: Git <i class="fa-brands fa-git"></i>, GitHub
+            Version control: Git<i class="fa-brands fa-git"></i>, GitHub
             <i class="fa-brands fa-github"></i>
           </li>
           <li>Agile development methodologies: Scrum, Kanban</li>
@@ -260,20 +264,19 @@
         <ul>
           <li>
             <a href="https://github.com">My GitHub →
-              <i class="fab fa-github"></i></a>
+              <i class="fab fa-github"></i>
+            </a>
           </li>
           <li>
             <a href=" cherises711@gmail.com">My Email →
               <i class="fas fa-envelope"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/">My Linkedin
+            <a href="https://www.linkedin.com">My Linkedin
               → <i class="fab fa-linkedin"></i><i class="fa fa-horizontal-rule"></i></a>
           </li>
         </ul>
       </section>
-
-
 
       <section id="philosophy">
         <div class="line"></div>
@@ -307,7 +310,14 @@
     </div>
     </div> <!--background shapes closing -->
   </main>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
 
+    hamburger.addEventListener('click', () => {
+      navbar.classList.toggle('show-nav');
+    });
+  </script>
 </body>
 
 </html>
