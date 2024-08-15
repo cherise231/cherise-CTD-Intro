@@ -762,3 +762,9 @@ li i {
     display: block; /*Ensures the element respects the width */
   }
 }
+
+.footer-class {
+  text-align: center;
+  color: white;
+  padding: 2em;
+}
