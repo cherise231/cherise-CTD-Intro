@@ -5,11 +5,14 @@ hamburger.addEventListener("click", () => {
   navbar.classList.toggle("show-nav");
 });
 
+//footer
 const footerElem = document.createElement("footer");
+
 const bodyElem = document.querySelector("body");
-const currentYear = new Date().getFullYear();
+const today = new Date();
+const thisYear = today.getFullYear();
 const copyrightSymbol = "\u00A9";
-footerElem.innerText = copyrightSymbol + " " + currentYear + " Cherise";
+footerElem.innerText = copyrightSymbol + " " + thisYear + " Cherise";
 //creates a footer class called footer-class
 footerElem.className = "footer-class";
 // footer.style.background = "pink";
@@ -79,3 +82,5 @@ for (let i = 0; i < webDevSkills.length; i++) {
 
   webDevskillsList.appendChild(webDevText);
 }
+
+//Tools and Technologies
