@@ -271,7 +271,7 @@ main {
 #experience h2,
 #skills h2,
 #connect h2,
-#philosophy h2 {
+#philosophy h2, #messages h2 {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 700;
@@ -416,6 +416,13 @@ li {
 
 li i {
   margin-left: 10px;
+}
+
+#messages {
+  /*background-color: #040a12; rgb(77, 77, 148) */
+  color: #ffffff;
+  /* scroll-margin-top: 7em; */
+  padding: 20px 200px 40px 200px;
 }
 
 /* ///////////background shapes/////////////// */
@@ -593,7 +600,7 @@ li i {
   #experience,
   #skills,
   #projects,
-  #connect {
+  #connect, #messages {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
@@ -728,7 +735,7 @@ li i {
   #skills,
   #projects,
   #connect,
-  #philosophy {
+  #philosophy, #messages {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
