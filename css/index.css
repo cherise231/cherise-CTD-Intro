@@ -232,8 +232,6 @@ h1 {
   animation: slideIn 3s forwards;
   animation-delay: 4s;
   /* font-style: italic; */
-  
-  
 }
 
 @keyframes slideIn {
@@ -359,7 +357,10 @@ main {
 #philosophy {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
-  padding: 20px 200px 200px 200px;
+  
+  padding: 20px 200px 150px 200px;
+  
+
 }
 
 blockquote {
@@ -426,10 +427,12 @@ li i {
   width: 100%;
   height: 100%; /* Make it full-width and full-height */
   /*z-index: 1;  Send it behind the content */
-  border-radius: 50%;
+  /* border-radius: 50%; */
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add some depth */
   /*opacity: 0.2;  Add 50% transparency */
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .shape div {
@@ -443,25 +446,35 @@ li i {
 .shape-1 {
   background: linear-gradient(45deg, #51f9ff, #000000);
   top: 1%;
-  left: -10%;
+  left: -8%;
   transform: translate(0, 0);
-  /*width: 12em;  Make.shape-1 larger using em units */
-  /* height: 12em; Make.shape-1 larger using em units */
-  width: 20em;
-  height: 20em;
+
+  /* width: 20em;
+  height: 20em; */
+  min-width: 18em;
+  min-height: 18em;
+  max-width: 25vw;
+  max-height: 25vw;
+  width: 20vw;
+  height: 20vw;
   opacity: 0.2;
   z-index: -1;
 }
 
 .shape-2 {
   background: linear-gradient(135deg, #51f9ff, #000000);
-  top: 55%;
-  left: 1%;
+  top: 57%;
+  left: 3%;
   transform: translate(0, 0);
-
-  width: 10em;
-  height: 10em;
-  opacity: 0.3;
+  /* width: 10em;
+  height: 10em; */
+  min-width: 10em;
+  min-height: 10em;
+  max-width: 15vw;
+  max-height: 15vw;
+  width: 12vw;
+  height: 12vw;
+  opacity: 0.2;
 }
 
 .shape-3 {
@@ -487,7 +500,7 @@ li i {
 }
 
 .inner-diamond {
-  position: absolute;
+  /* position: absolute; */
   top: calc(
     50% - 75px
   ); /* Calculate top position: 50% of parent height - half of inner diamond height */
@@ -510,7 +523,7 @@ li i {
 
   .navbar {
     background-color: rgb(1, 68, 80, 0.8); /**/
-    font-size: .9em;
+    font-size: 0.9em;
     /* background-color: transparent; */
     background-image: linear-gradient(
       to bottom,
@@ -590,8 +603,9 @@ li i {
   #philosophy {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
+    /* background: pink; */
     color: #ffffff;
-    padding: 0px 100px 400px 40px;
+    padding: 0px 100px 150px 100px;
   }
 }
 
@@ -614,25 +628,21 @@ li i {
     flex-direction: column; /* stack the nav items vertically on mobile */
     padding-top: 4em;
     position: fixed;
-    
   }
- 
 
   .hamburger {
     display: block; /* show the hamburger icon on mobile */
     top: 1em; /* pin it to the top */
-    right: .9em;
+    right: 0.9em;
     font-size: 1.5em;
     cursor: pointer;
     position: absolute;
-    
   }
 
   .hamburger i {
     /* padding-top: 10px; */
     color: #fff;
     position: absolute;
-    
   }
 
   .navbar ul {
@@ -645,8 +655,7 @@ li i {
 
   .navbar ul {
     flex-direction: column; /* stack the nav items vertically on mobile */
-    flex-grow: 1;  /*to make it take up the remaining space */
-    
+    flex-grow: 1; /*to make it take up the remaining space */
   }
 
   .navbar li {
@@ -658,7 +667,7 @@ li i {
     text-shadow: 0 0 5px #2a5c58, 0 0 10px #55b9b3, 0 0 10px #77fff7;
     font-size: 1.5em;
     position: absolute; /*take it out of the normal flow */
-    top: .5em;
+    top: 0.5em;
     left: 1em; /* pin it to the left */
     margin: 10px; /* add some margin to create some space */
   }
@@ -669,12 +678,10 @@ li i {
     transform: translateY(-50%) rotate(360deg);
     top: 1em;
     left: 1em; /* pin it to the left */
-
   }
 
   #background-video {
     height: 80vh;
-    
   }
 
   main {
@@ -751,7 +758,7 @@ li i {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
-    padding: 0px 40px 200px 40px;
+    padding: 0px 40px 80px 40px;
   }
 
   .line {
@@ -767,4 +774,13 @@ li i {
   text-align: center;
   color: white;
   padding: 4em 0;
+  /* background-color: #c90772; */
+}
+
+#skillsTitleh3 {
+padding-top: .5em;
+}
+
+#skills-items, #web-dev-skills-list, #tools-skills-list {
+  margin-bottom: 2.5em; /* add 40px margin bottom to the #skills-items element */
 }

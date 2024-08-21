@@ -15,7 +15,7 @@ const copyrightSymbol = "\u00A9";
 footerElem.innerText = copyrightSymbol + " " + thisYear + " Cherise";
 //creates a footer class called footer-class
 footerElem.className = "footer-class";
-// footer.style.background = "pink";
+// footerElem.style.background = "pink";
 console.log(footerElem);
 console.log("working!");
 bodyElem.appendChild(footerElem);
@@ -70,6 +70,8 @@ const webDevIconsArray = [
 
 const webDevskillsSection = document.getElementById("skills");
 const webDevskillsList = document.createElement("ul");
+// gives the ul an id
+webDevskillsList.id = "web-dev-skills-list"
 
 const webDevHeader = document.createElement("h3");
 webDevHeader.innerText = "Web Development:";
@@ -84,3 +86,67 @@ for (let i = 0; i < webDevSkills.length; i++) {
 }
 
 //Tools and Technologies
+const toolsSkills = [
+  "Version control: Git, GitHub",
+  "Agile development methodologies: Scrum, Kanban",
+  "APIs: RESTful APIs, API design ",
+  "Cloud platforms: Google Colab (for data analytics and Python development)",
+  "Asynchronous programming"
+];
+const toolsIconsArray = [
+  "fa-brands fa-github",
+  "fas fa-form",
+  "fa-solid fa-plug",
+  "fa-solid fa-cloud",
+  "fas fa-form",
+];
+
+const toolsSkillsSection = document.getElementById("skills");
+const toolsSkillsList = document.createElement("ul");
+// gives the ul an id
+toolsSkillsList.id = "tools-skills-list"
+
+const toolsHeader = document.createElement("h3");
+toolsHeader.innerText = "Tools and Technologies:";
+toolsSkillsSection.appendChild(toolsHeader);
+toolsSkillsSection.appendChild(toolsSkillsList);
+
+for (let i = 0; i < toolsSkills.length; i++) {
+  let toolsText = document.createElement("li");
+  toolsText.innerHTML = `${toolsSkills[i]} <i class="${toolsIconsArray[i]}"></i>`;
+
+  toolsSkillsList.appendChild(toolsText);
+}
+
+//Data Analytics
+
+const dataSkills = [
+  "Data Analytics",
+  "Data visualization (using Python and Google Colab)",
+  "Data manipulation and analysis (using Python and Google Colab)",
+  "Python libraries: NumPy, Pandas, Matplotlib, Scikit-learn"
+];
+
+const dataIconsArray = [
+  "fas fa-chart-column",
+  "fas fa-form",
+  "fas fa-database",
+  "fas fa-cubes"
+];
+
+const dataSkillsSection = document.getElementById("skills");
+const dataSkillsList = document.createElement("ul");
+// gives the ul an id
+dataSkillsList.id = "data-skills-list"
+
+const dataHeader = document.createElement("h3");
+dataHeader.innerText = "Data Analysis:";
+dataSkillsSection.appendChild(dataHeader);
+dataSkillsSection.appendChild(dataSkillsList);
+
+for (let i = 0; i < dataSkills.length; i++) {
+  let dataText = document.createElement("li");
+  dataText.innerHTML = `${dataSkills[i]} <i class="${dataIconsArray[i]}"></i>`;
+
+  dataSkillsList.appendChild(dataText);
+}
