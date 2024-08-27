@@ -71,7 +71,7 @@ const webDevIconsArray = [
 const webDevskillsSection = document.getElementById("skills");
 const webDevskillsList = document.createElement("ul");
 // gives the ul an id
-webDevskillsList.id = "web-dev-skills-list"
+webDevskillsList.id = "web-dev-skills-list";
 
 const webDevHeader = document.createElement("h3");
 webDevHeader.innerText = "Web Development:";
@@ -91,7 +91,7 @@ const toolsSkills = [
   "Agile development methodologies: Scrum, Kanban",
   "APIs: RESTful APIs, API design ",
   "Cloud platforms: Google Colab (for data analytics and Python development)",
-  "Asynchronous programming"
+  "Asynchronous programming",
 ];
 const toolsIconsArray = [
   "fa-brands fa-github",
@@ -104,7 +104,7 @@ const toolsIconsArray = [
 const toolsSkillsSection = document.getElementById("skills");
 const toolsSkillsList = document.createElement("ul");
 // gives the ul an id
-toolsSkillsList.id = "tools-skills-list"
+toolsSkillsList.id = "tools-skills-list";
 
 const toolsHeader = document.createElement("h3");
 toolsHeader.innerText = "Tools and Technologies:";
@@ -124,20 +124,20 @@ const dataSkills = [
   "Data Analytics",
   "Data visualization (using Python and Google Colab)",
   "Data manipulation and analysis (using Python and Google Colab)",
-  "Python libraries: NumPy, Pandas, Matplotlib, Scikit-learn"
+  "Python libraries: NumPy, Pandas, Matplotlib, Scikit-learn",
 ];
 
 const dataIconsArray = [
   "fas fa-chart-column",
   "fas fa-form",
   "fas fa-database",
-  "fas fa-cubes"
+  "fas fa-cubes",
 ];
 
 const dataSkillsSection = document.getElementById("skills");
 const dataSkillsList = document.createElement("ul");
 // gives the ul an id
-dataSkillsList.id = "data-skills-list"
+dataSkillsList.id = "data-skills-list";
 
 const dataHeader = document.createElement("h3");
 dataHeader.innerText = "Data Analysis:";
@@ -150,3 +150,42 @@ for (let i = 0; i < dataSkills.length; i++) {
 
   dataSkillsList.appendChild(dataText);
 }
+
+// const messageForm = document.getElementById("leave_message")
+const messageForm = document.getElementsByName("leave_message")[0];
+
+messageForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+
+  console.log("usersName", usersName);
+  console.log("usersEmail", usersEmail);
+  console.log("usersMessage", usersMessage);
+
+  // Display messages in list
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+
+  const newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> <span>${usersMessage}</span>`;
+
+  // create remove button
+  removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.setAttribute("type", "button");
+
+  removeButton.addEventListener("click", (event) => {
+    const entry = event.target.parentNode;
+    entry.remove();
+    
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  event.target.reset();
+});
