@@ -153,6 +153,15 @@ for (let i = 0; i < dataSkills.length; i++) {
 
 // const messageForm = document.getElementById("leave_message")
 const messageForm = document.getElementsByName("leave_message")[0];
+const messageSection = document.getElementById("messages");
+const messageHeader = messageSection.querySelector("h2");
+
+messageHeader.hidden = true;
+
+function showHeader() {
+  // const messageHeader = messageSection.querySelector("h2");
+  messageHeader.style.display = "block";
+}
 
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -178,14 +187,25 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.innerText = "remove";
   removeButton.setAttribute("type", "button");
 
+  // messageSection.hidden = false;
+  // messageHeader.hidden = false;
+
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
     entry.remove();
-    
+    // if (messageList.children.length === 0) {
+    //   messageSection.hidden = true;
+    //   messageHeader.hidden = true;
+    // }
   });
 
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
 
   event.target.reset();
+
+  if (messageList.children.length === 1) {
+    showHeader();
+  }
+
 });
