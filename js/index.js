@@ -157,10 +157,11 @@ const messageSection = document.getElementById("messages");
 const messageHeader = messageSection.querySelector("h2");
 
 messageHeader.hidden = true;
+// messageSection.hidden = true;
 
 function showHeader() {
-  // const messageHeader = messageSection.querySelector("h2");
   messageHeader.style.display = "block";
+  // messageSection.hidden = false;
 }
 
 messageForm.addEventListener("submit", (event) => {
@@ -187,15 +188,14 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.innerText = "remove";
   removeButton.setAttribute("type", "button");
 
-  // messageSection.hidden = false;
-  // messageHeader.hidden = false;
-
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
     entry.remove();
     // if (messageList.children.length === 0) {
-    //   messageSection.hidden = true;
-    //   messageHeader.hidden = true;
+    //   messageList.style.display = "none";
+    //   messageHeader.style.display = "none";
+    //     messageSection.hidden = true;
+    //     messageHeader.hidden = true;
     // }
   });
 
@@ -207,5 +207,6 @@ messageForm.addEventListener("submit", (event) => {
   if (messageList.children.length === 1) {
     showHeader();
   }
-
+  
 });
+
