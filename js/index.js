@@ -199,6 +199,51 @@ messageForm.addEventListener("submit", (event) => {
     // }
   });
 
+  // create edit button
+  editButton = document.createElement("button");
+  editButton.innerText = "edit";
+  editButton.setAttribute("type", "button");
+
+  editButton.addEventListener("click", (event) => {
+    const entry = event.target.parentNode;
+    const nameInput = document.createElement("input");
+    nameInput.type = "text";
+    nameInput.value = entry.querySelector("a").textContent.trim();
+
+    const emailInput = document.createElement("input");
+    emailInput.type = "email";
+    emailInput.value = entry.querySelector("a").href.replace("mailto:", "");
+
+    const messageInput = document.createElement("textarea");
+    messageInput.value = entry.querySelector("span").textContent;
+
+    const saveButton = document.createElement("button");
+    saveButton.innerText = "save";
+    saveButton.setAttribute("type", "button");
+
+    saveButton.addEventListener("click", () => {
+      const newName = nameInput.value;
+      const newEmail = emailInput.value;
+      const newMessage = messageInput.value;
+
+      entry.querySelector("a").textContent = newName;
+      entry.querySelector("a").href = `mailto:${newEmail}`;
+      entry.querySelector("span").textContent = newMessage;
+
+      entry.removeChild(nameInput);
+      entry.removeChild(emailInput);
+      entry.removeChild(messageInput);
+      entry.removeChild(saveButton);
+    });
+
+    entry.appendChild(nameInput);
+    entry.appendChild(emailInput);
+    entry.appendChild(messageInput);
+    entry.appendChild(saveButton);
+  });
+
+  newMessage.appendChild(editButton);
+  
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
 
@@ -207,6 +252,4 @@ messageForm.addEventListener("submit", (event) => {
   if (messageList.children.length === 1) {
     showHeader();
   }
-  
 });
-
