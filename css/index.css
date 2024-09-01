@@ -271,7 +271,7 @@ main {
 #experience h2,
 #skills h2,
 #connect h2,
-#philosophy h2, #messages h2 {
+#philosophy h2, #message-form h2, #messages h2 {
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 700;
@@ -358,7 +358,7 @@ main {
   /*background-color: #040a12; rgb(77, 77, 148) */
   color: #ffffff;
   
-  padding: 20px 200px 150px 200px;
+  padding: 20px 200px 40px 200px;
   
 
 }
@@ -418,8 +418,8 @@ li i {
   margin-left: 10px;
 }
 
-#messages {
-  /*background-color: #040a12; rgb(77, 77, 148) */
+#message-form, #messages {
+  /* background-color: #9bc6fd;  */
   color: #ffffff;
   /* scroll-margin-top: 7em; */
   padding: 20px 200px 40px 200px;
@@ -600,7 +600,7 @@ li i {
   #experience,
   #skills,
   #projects,
-  #connect, #messages {
+  #connect, #message-form, #messages {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
@@ -612,7 +612,7 @@ li i {
     scroll-margin-top: 7em;*/
     /* background: pink; */
     color: #ffffff;
-    padding: 0px 100px 150px 100px;
+    padding: 0px 100px 40px 100px;
   }
 }
 
@@ -735,7 +735,7 @@ li i {
   #skills,
   #projects,
   #connect,
-  #philosophy, #messages {
+  #message-form, #messages {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
@@ -765,7 +765,7 @@ li i {
     /*background-color: #040a12; rgb(77, 77, 148) 
     scroll-margin-top: 7em;*/
     color: #ffffff;
-    padding: 0px 40px 80px 40px;
+    padding: 0px 40px 40px 40px;
   }
 
   .line {
@@ -790,4 +790,59 @@ padding-top: .5em;
 
 #skills-items, #web-dev-skills-list, #tools-skills-list {
   margin-bottom: 2.5em; /* add 40px margin bottom to the #skills-items element */
+}
+
+/* Message Form styling */
+
+
+#messages {
+  margin-top: 40px;
+}
+
+#messages h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+#messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#messages-list li {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0); 
+  padding-left: 20px;
+  /* padding: 0 1em 0 4em; */
+}
+
+
+
+.submit-button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#messages-list li button[type="button"] {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 10px;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 4em 0 4em;
+}
+
+/* button color hover */
+#messages-list li button[type="button"]:hover {
+  background-color: #e6e6e6;
 }
