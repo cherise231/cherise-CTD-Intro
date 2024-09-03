@@ -381,6 +381,7 @@ blockquote {
   width: 40%;
   /* grid-auto-flow: dense; */
   align-items: baseline;
+  padding-top: 1em;
 }
 
 /* experience columns */
@@ -787,6 +788,7 @@ li i {
 #skillsTitleh3 {
 padding-top: .5em;
 }
+
 
 #skills-items, #web-dev-skills-list, #tools-skills-list {
   margin-bottom: 2.5em; /* add 40px margin bottom to the #skills-items element */

@@ -253,3 +253,25 @@ messageForm.addEventListener("submit", (event) => {
     showHeader();
   }
 });
+
+// fetch request
+const url = "https://api.github.com/users/cherise231/repos";
+fetch(url)
+  .then((response) => response.json())
+  .then((repos) => {
+    console.log(repos);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    repos.forEach((repositories) => {
+      // create an li for projects
+      const project = document.createElement("li");
+      project.innerText = repositories.name;
+      projectList.append(project);
+    });
+
+  })
+
+  .catch((error) => {
+    console.error("error", error)
+  });
