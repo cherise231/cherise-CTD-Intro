@@ -191,12 +191,12 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
     entry.remove();
-    // if (messageList.children.length === 0) {
-    //   messageList.style.display = "none";
-    //   messageHeader.style.display = "none";
-    //     messageSection.hidden = true;
-    //     messageHeader.hidden = true;
-    // }
+    if (messageList.children.length === 0) {
+      // messageList.style.display = "none";
+      // messageHeader.style.display = "none";
+        // messageSection.hidden = true;
+        messageHeader.hidden = true;
+    }
   });
 
   // create edit button
