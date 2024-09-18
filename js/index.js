@@ -205,21 +205,28 @@ messageForm.addEventListener("submit", (event) => {
   editButton.setAttribute("type", "button");
 
   editButton.addEventListener("click", (event) => {
-    const entry = event.target.parentNode;
+    const entry = event.target.parentNode; 
+    const editForm = document.createElement("div")
+    editForm.className = "edit-form";
+    
     const nameInput = document.createElement("input");
     nameInput.type = "text";
     nameInput.value = entry.querySelector("a").textContent.trim();
+    nameInput.className = "edit-input";
 
     const emailInput = document.createElement("input");
     emailInput.type = "email";
     emailInput.value = entry.querySelector("a").href.replace("mailto:", "");
+    emailInput.className = "edit-input";
 
     const messageInput = document.createElement("textarea");
     messageInput.value = entry.querySelector("span").textContent;
+    messageInput.className = "edit-input"
 
     const saveButton = document.createElement("button");
     saveButton.innerText = "save";
     saveButton.setAttribute("type", "button");
+    saveButton.className = "edit-button";
 
     saveButton.addEventListener("click", () => {
       const newName = nameInput.value;
@@ -234,12 +241,16 @@ messageForm.addEventListener("submit", (event) => {
       entry.removeChild(emailInput);
       entry.removeChild(messageInput);
       entry.removeChild(saveButton);
+      // entry.removeChild(editForm);
     });
 
+    
     entry.appendChild(nameInput);
     entry.appendChild(emailInput);
     entry.appendChild(messageInput);
     entry.appendChild(saveButton);
+
+    // entry.appendChild(editForm);
   });
 
   newMessage.appendChild(editButton);
