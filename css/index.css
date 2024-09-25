@@ -64,7 +64,7 @@ header {
   align-items: center;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 2em;
 }
 
 /* Navbar home logo*/
@@ -773,8 +773,8 @@ li i {
     width: 3.5in; /* or 5in */
     border-top: 1px solid #ccc;
     /*margin: 0 auto;  centers the line within the container */
-    height: 0; /* Ensures the element does not affect vertical layout */
-    display: block; /*Ensures the element respects the width */
+    height: 0; 
+    display: block; 
   }
 }
 
@@ -852,7 +852,7 @@ padding-top: .5em;
 
 .submit-button:hover {
   background-color: #005b72; /* Lighten the background color on hover */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover */
   text-decoration: underline;
 }
 
@@ -915,6 +915,3 @@ padding-top: .5em;
   margin: 10px 0px 5px -2px;
 }
 
-.edit-form button[type="button"].edit-button {
-  background-color: #008000; /* Change the background color to green */
-}
