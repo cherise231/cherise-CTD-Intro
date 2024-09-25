@@ -861,7 +861,7 @@ padding-top: .5em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Increase box shadow on active state */
 }
 
-#messages-list li button[type="button"] {
+#messages-list li button[type="button"]:not(.edit-button) {
   background-color: #ffffff;
   color: #000000;
   padding: 5px 10px;
@@ -871,16 +871,21 @@ padding-top: .5em;
   margin: 0 0 0 1em;
 }
 
+.edit-button {
+  
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  /* margin: 0 0 0 1em; */
+}
+
 /* button color hover */
 #messages-list li button[type="button"]:hover {
   background-color: #e6e6e6;
 }
-
-/* edit form styling */
-/*.edit-form {
-   padding: 20px; 
-}*/
-
 
 
 .edit-form input, .edit-form textarea {
@@ -900,9 +905,6 @@ padding-top: .5em;
   cursor: pointer;
 }
 
-.edit-form button[type="button"]:hover {
-  background-color: #3e8e41;
-}
 
 .edit-input {
   /* background-color: pink; */
@@ -911,4 +913,8 @@ padding-top: .5em;
   border-radius: 5px;
   width: 100%; 
   margin: 10px 0px 5px -2px;
+}
+
+.edit-form button[type="button"].edit-button {
+  background-color: #008000; /* Change the background color to green */
 }
