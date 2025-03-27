@@ -797,6 +797,7 @@ padding-top: .5em;
 /* Message Form styling */
 
 
+
 #messages {
   margin-top: 40px;
 }
@@ -833,6 +834,36 @@ padding-top: .5em;
 #messages-list li span {
   margin-left: 10px; 
 }
+
+ /* form {
+  display: flex;
+  flex-direction: column; 
+}  */
+
+label {
+  font-weight: bold; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: "Poppins", sans-serif;
+  width: 50%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin-top: 10px;
+  margin-bottom: 15px; 
+  box-sizing: border-box; 
+
+}
+
+
+textarea {
+ 
+  height: 100px;
+}
+
 
 .submit-button {
   background-color: #00a396;
